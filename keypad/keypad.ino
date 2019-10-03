@@ -81,15 +81,15 @@ void doAction(int pin) {
    switch (pin) {
    case 2:
       digitalWrite(LED_PIN, 1);
-      Keyboard.press(KEY_ESC);
+      Keyboard.press(KEY_PAGE_DOWN); // page down
    break;
    case 3:
       digitalWrite(LED_PIN, 1);
       Keyboard.press(KEY_UP_ARROW);
    break;
    case 4:
-   Keyboard.press(KEY_LEFT_GUI);
-   Keyboard.press('f');
+   Keyboard.press(KEY_PAGE_UP);
+   //Keyboard.press('f'); // page up
    break;
    case 7:
       digitalWrite(LED_PIN, 1);
@@ -147,34 +147,45 @@ void doFn1Action(int pin) {
    digitalWrite(LED_PIN, 0);
 }
 
-
-void doFn2Action(int pin) {
+/* Xdebug Navigation Layer */
+void doFn2Action(int pin) { // left FN
    
    switch (pin) {
    case 2:
       digitalWrite(LED_PIN, 1);
-      Keyboard.press(KEY_ESC);
+      // next //  alt + cmd + R
+      Keyboard.press(KEY_LEFT_GUI);
+      Keyboard.press(KEY_LEFT_ALT);
+      Keyboard.press('R');
       //KEY_ESC
    break;
    case 3:
       digitalWrite(LED_PIN, 1);
-      Keyboard.press(KEY_UP_ARROW);
+      // KEY_UP_ARROW
+      Keyboard.press(KEY_LEFT_ALT);
+      Keyboard.press(KEY_F9);
    break;
    case 4:
-   Keyboard.press(KEY_LEFT_GUI);
-   Keyboard.press('t');
+     Keyboard.press(KEY_LEFT_GUI); // back
+     Keyboard.press(KEY_F2);
+     //Keyboard.press('t');
    break;
    case 7:
       digitalWrite(LED_PIN, 1);
-      Keyboard.press(KEY_LEFT_ARROW);
+      //KEY_LEFT_ARROW
+      Keyboard.press(KEY_LEFT_SHIFT); 
+      Keyboard.press(KEY_F8);
    break;
    case 8:
       digitalWrite(LED_PIN, 1);
-      Keyboard.press(KEY_DOWN_ARROW);
+      Keyboard.press(KEY_F8); //KEY_DOWN_ARROW
    break;
    case 9:
       digitalWrite(LED_PIN, 1);
-      Keyboard.press(KEY_RIGHT_ARROW);
+      //KEY_RIGHT_ARROW // 
+      //Keyboard.press(KEY_LEFT_ALT);
+      //Keyboard.press(KEY_LEFT_SHIFT); 
+      Keyboard.press(KEY_F7);
    break;
   
    }
