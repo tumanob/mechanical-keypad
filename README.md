@@ -3,3 +3,6 @@
 3 - connect gnd + reset and
 
 enjoy new keymap
+
+
+tip: https://karabiner-elements.pqrs.org/ to use modifiers through keyboard and numpads
